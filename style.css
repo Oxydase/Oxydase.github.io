@@ -1,0 +1,56 @@
+p { 
+    color:blue;
+}
+
+h1{
+    text-align: center;
+    background-color: cornflowerblue;
+}
+
+h2{
+    background-color: cornflowerblue;
+}
+
+#titre {
+    color: white;
+}
+
+#exp {
+    font-weight: bold;
+}
+
+#form {
+    font-weight: normal;
+}
+
+#portfolio {
+    background-color: aquamarine;
+}
+
+#contact {
+    color: blue;
+}
+
+#texte {
+    color: green;
+}
+
+#mot {
+    color: black;
+}
+
+#ligne_tableau {
+    background-color: lightgreen;
+}
+
+#grand {
+    font-size: 30px;
+}
+
+#mot_rouge {
+    color: red;
+}
+
+#boite_fin {
+    background-color: purple;
+}
