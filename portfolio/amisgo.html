@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Milton</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Playfair+Display&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- NAV -->
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Milton Figueiredo</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">A propos de moi</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Projets</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main class="container">
+        <!-- PRÉSENTATION DU PROJET -->
+        <div class="row">
+            <h1>Le projet AmisGo</h1>
+            <p>AmisGo est un projet qui à été réalisé en groupe dans le cadre de ma formation avec LaPasserelle. Le groupe était composé de quelques camarades développeurs issus de ma formation ainsi que de quelques designers issus de la formation en UI/UX design proposé dans le même établissement</p>
+            <p>Le projet est une Web-App se nommant AmisGo consistant à mettre en relation des utilisateurs à travers différentes activités tels que l'escalade, la randonnée, une sortie au restaurant etc. Sur le site il est également possible de passer un test de personnalité. A la suite de celui-ci, les utilisateurs se voient attribuer une personnalité (parmis 12 disponibles) qu'ils peuvent afficher sur leur profil personnel</p>
+            <video controls src="assets/videos/video.mp4" poster="assets/images/Cover-test.svg">vidéo présentation amisgo</video>
+        </div>
+
+        <!-- COMMENT S'EST CONSTRUIT LE PROJET -->
+        <div class="row">
+            <h2>Comment s'est construit le projet</h2>
+            <p>La création du projet à débuté par une phase de brainstorming concernant le thème. Une fois que le thème à été convenu, un benchmark à été réalisé afin de comparer les principaux sites ayant le même but que AmisGo(tels que meetup, ovs ou encore frimake)</p>
+            <p>Une fois le benchmark finalisé, j'ai commencé à travailler en méthode AGILE-SCRUM. Cette méthode est une approche de gestion de projet qui vise à favoriser la flexibilité, la collaboration et l'adaptation aux changements. Elle est beaucoup utilisé dans le developpement logiciel mais peut également être appliqué à d'autres domaines. La méthode Scrum se base sur des cycles de développement appelés "sprints". Chaque sprint dure généralement de une à quatre semaines, pendant lesquelles une équipe de travail se concentre sur la réalisation de tâches. Dans notre cas nous avions des sprints de une semaine avec des réunions quotidiennes entre développeur pour voir l'avancée de chacun et des revues de sprint à chaque fin de semaine avec l'equipe design.</p>
+            <h3 class="text-center">Schéma méthode agile - scrum</h3>
+
+            <img src="assets/images/scrum.jpeg" alt="">
+        </div>
+
+        <!-- BASE DE DONNEES METHODE MERISE -->
+        <div class="row">
+            <h2>Base de données (Méthode Merise)</h2>
+            <p>Lors de la création du projet, j'ai dû créer une base de données. Pour ce faire, j'ai d'abord dû utiliser la méthode Merise qui m'a permit  de mieux visualiser l'ensemble de la base de données que je voulais créer à partir de notre cahier des charges ainsi que des retours de l'equipe design et de leur userflow / userstory.</p>
+            <p>La méthode Merise consiste à associer (liaison par un verbe) une entité (une entité est un regroupement d'informations appelés "attributs") à une autre en mettant en avant leurs cardinalités.</p>
+            <p>Pour mettre en place cette méthode je me suis servi de l'application Miro qui est une application permettant de créer des cartes mentales.</p>
+        </div>
+
+        <!-- BASE DE DONNÉES CREATION -->
+        <div class="row">
+            <h2>Base de données (Création de la base de données)</h2>
+            <p>Une fois la méthode Merise terminée j'ai du créer la base de données à partir de l'interface de PhpMyAdmin</p>
+            <div class="d-flex flex-column align-items-center">
+                <img src="assets/images/capt_phpmyadmin.png" class="bdd_img" alt="">
+            </div>
+        </div>
+
+        <!-- CRÉATION DE COMPOSANTS D'ACCES AUX DONNÉES -->
+        <div class="row">
+            <h2>Création de composants d'accès aux données (mise en place de Symfony)</h2>
+            <p>Une fois la base de données crée j'ai mis en place Symfony dans le projet afin d'avoir accès aux informations que je souhaite à partir de repository</p>
+            <div class="d-flex flex-column align-items-center">
+                
+            </div>
+        </div>
+
+        <!-- DEVELOPPEMENT DE L'APPLICATION (INTÉGRATION À PARTIR DE WIREFRAME) -->
+        <div class="row">
+            <h2>Développement de l'application (Intégration à partir de wireframe)</h2>
+            <p>A partir de wireframe et de maquette réalisé à l'aide de figma j'ai pu commencer à intégrer des pages web avec Twig un moteur template (outil qui simplifie la syntaxe) associé à Symfony qui suit le principe de MVC (modèle vue contrôleur) et permet de créer des vues dynamiques en utilisant des fichiers de template.</p>
+            <!-- SCREEN DES PAGES DU SITE -->
+            <div class="row">
+                <div class="col-6 d-flex flex-column align-items-center">
+                    <h3>La page d'accueil</h3>
+                    <img class="pres_projet" src="assets/images/Homepage.jpg" alt="">
+                </div>
+                <div class="col-6  d-flex flex-column align-items-center">
+                    <h3 class="text-center">La page présentant les différentes personnalités</h3>
+                    <img class="pres_projet" src="assets/images/Personalités.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <!-- SCRIPT BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
