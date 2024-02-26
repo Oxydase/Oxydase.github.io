@@ -41,44 +41,88 @@
 
     <main class="container">
         <!-- PRÉSENTATION DU PROJET -->
-        <div class="row">
-            <h1>Le projet AmisGo</h1>
+        <div class="row">                                                                                                          
+          <h1>Le projet AmisGo</h1>
+          <div class="col-6">
             <p>AmisGo est un projet qui à été réalisé en groupe dans le cadre de ma formation avec LaPasserelle. Le groupe était composé de quelques camarades développeurs issus de ma formation ainsi que de quelques designers issus de la formation en UI/UX design proposé dans le même établissement</p>
+          </div>
+          <div class="col-6">
             <p>Le projet est une Web-App se nommant AmisGo consistant à mettre en relation des utilisateurs à travers différentes activités tels que l'escalade, la randonnée, une sortie au restaurant etc. Sur le site il est également possible de passer un test de personnalité. A la suite de celui-ci, les utilisateurs se voient attribuer une personnalité (parmis 12 disponibles) qu'ils peuvent afficher sur leur profil personnel</p>
+          </div>
             <video controls src="assets/videos/video.mp4" poster="assets/images/Cover-test.svg">vidéo présentation amisgo</video>
         </div>
 
+        <div class="row transiReverse"></div>
         <!-- COMMENT S'EST CONSTRUIT LE PROJET -->
-        <div class="row">
-            <h2>Comment s'est construit le projet</h2>
+        <div class="row fondBlanc">
+          <h2>Comment s'est construit le projet</h2>
+
+          <div class="col-6 d-flex flex-column justify-content-center">
             <p>La création du projet à débuté par une phase de brainstorming concernant le thème. Une fois que le thème à été convenu, un benchmark à été réalisé afin de comparer les principaux sites ayant le même but que AmisGo(tels que meetup, ovs ou encore frimake)</p>
-            <p>Une fois le benchmark finalisé, j'ai commencé à travailler en méthode AGILE-SCRUM. Cette méthode est une approche de gestion de projet qui vise à favoriser la flexibilité, la collaboration et l'adaptation aux changements. Elle est beaucoup utilisé dans le developpement logiciel mais peut également être appliqué à d'autres domaines. La méthode Scrum se base sur des cycles de développement appelés "sprints". Chaque sprint dure généralement de une à quatre semaines, pendant lesquelles une équipe de travail se concentre sur la réalisation de tâches. Dans notre cas nous avions des sprints de une semaine avec des réunions quotidiennes entre développeur pour voir l'avancée de chacun et des revues de sprint à chaque fin de semaine avec l'equipe design.</p>
+            <p>Une fois le benchmark finalisé, j'ai commencé à travailler en méthode AGILE-SCRUM avec des sprints de une semaine, des réunions quotidiennes entre développeur pour voir l'avancée de chacun et des revues de sprint à chaque fin de semaine avec l'equipe design.</p>
+          </div>
+            
+          <div class="col-6">
+            <img src="assets/images/scrum.jpeg" class="image_side" alt="">
             <h3 class="text-center">Schéma méthode agile - scrum</h3>
 
-            <img src="assets/images/scrum.jpeg" alt="">
-        </div>
+          </div>
 
+        </div>
+        <div class="row transi"></div>
         <!-- BASE DE DONNEES METHODE MERISE -->
         <div class="row">
             <h2>Base de données (Méthode Merise)</h2>
             <p>Lors de la création du projet, j'ai dû créer une base de données. Pour ce faire, j'ai d'abord dû utiliser la méthode Merise qui m'a permit  de mieux visualiser l'ensemble de la base de données que je voulais créer à partir de notre cahier des charges ainsi que des retours de l'equipe design et de leur userflow / userstory.</p>
-            <p>La méthode Merise consiste à associer (liaison par un verbe) une entité (une entité est un regroupement d'informations appelés "attributs") à une autre en mettant en avant leurs cardinalités.</p>
+            <p>Avec la méthode Merise nous avons pu associer  une entité (une entité est un regroupement d'informations appelés "attributs") à une autre en mettant en avant leurs cardinalités.</p>
             <p>Pour mettre en place cette méthode je me suis servi de l'application Miro qui est une application permettant de créer des cartes mentales.</p>
+            <img src="assets/images/AmisGo_merise.png" class="image_side" alt="">
+            
         </div>
 
+        <div class="row transiReverse"></div>
+
         <!-- BASE DE DONNÉES CREATION -->
-        <div class="row">
+        <div class="row fondBlanc">
             <h2>Base de données (Création de la base de données)</h2>
-            <p>Une fois la méthode Merise terminée j'ai du créer la base de données à partir de l'interface de PhpMyAdmin</p>
+            <p>Une fois la méthode Merise terminée j'ai du créer la base de données à partir de l'interface de PhpMyAdmin et hydrater celle-ci avec des informations cohérentes</p>
             <div class="d-flex flex-column align-items-center">
                 <img src="assets/images/capt_phpmyadmin.png" class="bdd_img" alt="">
             </div>
         </div>
 
+        <div class="row transi"></div>
+
         <!-- CRÉATION DE COMPOSANTS D'ACCES AUX DONNÉES -->
         <div class="row">
-            <h2>Création de composants d'accès aux données (mise en place de Symfony)</h2>
-            <p>Une fois la base de données crée j'ai mis en place Symfony dans le projet afin d'avoir accès aux informations que je souhaite à partir de repository</p>
+            <h2>Mise en place de Symfony</h2>
+          <div class="col-6 d-flex flex-column justify-content-center">
+            <h3>Composants d'accès aux données</h3>
+            <p>Une fois la base de données crée j'ai mis en place Symfony dans le projet afin d'avoir accès aux informations que je souhaite à partir de repository grâce aux méthodes de l'ORM doctrine tels que findBy(), findAll() ou findOneBy() ou encore de queryBuilder permettant de personnaliser la requête.</p>
+          </div>
+          <div class="col-6">
+            <img src="assets/images/doctrine.png" alt="">
+          </div>
+
+          <div class="col-6">
+            <img src="assets/images/symfony-login.jpg" alt="" class="image_side">
+          </div>
+          <div class="col-6 d-flex flex-column justify-content-center">
+            <h3>Système d'authentification</h3>
+            <p>Pour que les visiteurs puissent s'inscrire à un évènement nous avons mis en place un système d'authentification avec la commande bin/console make:security:form-login</p>
+          </div>
+          
+          <div class="col-6 d-flex flex-column justify-content-center">
+            <h3>Crud</h3>
+            <p>Afin d'avoir facilement la possibilité de créer de nouveaux évènements sur le site j'ai dû utiliser la commande bin/console make:crud qui m'a crée un nouveau contrôleur avec différentes routes permettant de voir/modifier/supprimer/ajouter un évènement</p>
+          </div>
+          <div class="col-6 d-flex justify-content-center align-items-center">
+            <img src="assets/images/crud_symfony.png" alt="" class="image_side">
+          </div>
+            
+
+            <h3>Sécurité</h3>
+            <p>Nous avons mis en place sur le site un système de hierarchisation pour que les utilisateurs lambda ne puissent pas avoir accès a la route mennant a la suppression d'un évènement par exemple. Pour ce faire nous avons utilisé la commande bin/console make:security puis nous avons dû modifier le fichier security.yaml</p>
             <div class="d-flex flex-column align-items-center">
                 
             </div>
@@ -86,8 +130,8 @@
 
         <!-- DEVELOPPEMENT DE L'APPLICATION (INTÉGRATION À PARTIR DE WIREFRAME) -->
         <div class="row">
-            <h2>Développement de l'application (Intégration à partir de wireframe)</h2>
-            <p>A partir de wireframe et de maquette réalisé à l'aide de figma j'ai pu commencer à intégrer des pages web avec Twig un moteur template (outil qui simplifie la syntaxe) associé à Symfony qui suit le principe de MVC (modèle vue contrôleur) et permet de créer des vues dynamiques en utilisant des fichiers de template.</p>
+            <h2>Intégration à partir de wireframe</h2>
+            <p>A partir de wireframe et de maquette réalisé à l'aide de figma j'ai pu commencer à intégrer des pages web avec Twig un moteur template (outil qui simplifie la syntaxe) associé à Symfony qui suit le principe de MVC (modèle vue contrôleur) et permet de créer des vues dynamiques en utilisant des fichiers de template alimentés par des controllers (ayant reçu des informations issues d'un repository).</p>
             <!-- SCREEN DES PAGES DU SITE -->
             <div class="row">
                 <div class="col-6 d-flex flex-column align-items-center">
@@ -100,7 +144,28 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- ALGORITHME DU TEST DE PERSONNALITÉ -->
+        <div class="row">
+          <h2>Algorithme du test de personnalité</h2>
+          <div class="col-6 d-flex">
+            <img src="assets/images/AmisGo_perso.png" alt="">
+          </div>
+          <div class="col-6">
+            <p>Nous avons 12 types de personnalités différentes rangées dans 4 catégories soit 3 personnalités par catégorie</p>
+            <p>Le test comporte 5 séries de questions (soit 21 questions et 53 réponses)</p>
+            <ul>
+              <li><span>série 0 : </span>4 à 5 questions avec 4 réponses possibles, permettant de déterminer la catégorie</li>
+              <li><span>série 1 : </span>4 questions avec 3 réponses possibles pour déterminer la personnalité parmi les 3 présentes dans la catégorie 1</li>
+              <li><span>série 2 : </span>4 questions avec 3 réponses possibles pour déterminer la personnalité parmi les 3 présentes dans la catégorie 2</li>
+              <li><span>série 3 : </span>4 questions avec 3 réponses possibles pour déterminer la personnalité parmi les 3 présentes dans la catégorie 3</li>
+              <li><span>série 4 : </span>4 questions avec 3 réponses possibles pour déterminer la personnalité parmi les 3 présentes dans la catégorie 4</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- PARTIE EVENT -->
     </main>
     <!-- SCRIPT BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
