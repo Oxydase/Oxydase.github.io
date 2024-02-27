@@ -5,14 +5,23 @@
 }
 
 body{
-    /* background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-full-matte-grain-texture-flare-black-background-granulefrosted-textureblackblack-goldfrosted-image_71659.jpg'); */
+    background-image: url('../images/fond.jpg');
     background-position: center;
+    /* background-color: white; */
+    color: black;
+}
+
+.container{
+    background-color: white;
+}
+
+nav {
     background-color: black;
-    color: white;
 }
 
 h1, h2,nav{
-    font-family: 'Kanit', sans-serif;
+    font-family: "Open Sans", sans-serif;
+    color: #58595b;
 }
 
 h2{
@@ -82,7 +91,10 @@ h3{
 }
 
 .fondBlanc{
-    background-color: white;
-    color: black;
-    
+    background-color: black;
+    color: white !important;
+}
+
+.fondBlanc h1, .fondBlanc h2{
+    color: white !important;
 }
